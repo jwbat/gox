@@ -1,3 +1,3 @@
-module github.com/jwbat/gox
+module gox
 
 go 1.25.6
