@@ -49,6 +49,15 @@ func Sum[T Number](s []T) T {
 }
 
 
+func Mul[T Number](s []T) T {
+	var product T = 1
+	for _, v := range s {
+		product *= v
+	}
+	return product
+}
+
+
 func Max[T cmp.Ordered](s []T) (T, bool) {
     if len(s) == 0 {
         var zero T
