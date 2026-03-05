@@ -12,7 +12,7 @@ func Pipe[A any](funcs ...func(A) A) func(A) A {
 }
 
 
-// Compose takes functions f & g that returns function h such that h(x) = f(g(x)).
+// Compose takes functions f & g and returns a function h such that h(x) = f(g(x)).
 func Compose[A, B, C any](f func(B) C, g func(A) B) func(A) C {
 	return func(a A) C {
 		return f(g(a))
